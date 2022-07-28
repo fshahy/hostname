@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_hostname_form" model="ir.ui.view">
+            <field name="name">view.hostname.form</field>
+            <field name="model">hostname</field>
+            <field name="arch" type="xml">
+                <form string="Hostname">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hostname_tree" model="ir.ui.view">
+            <field name="name">view.hostname.tree</field>
+            <field name="model">hostname</field>
+            <field name="arch" type="xml">
+                <tree string="Hostnames">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hostname_view" model="ir.actions.act_window">
+            <field name="name">Hostname</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hostname</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_hostname_root" name="Hostname" sequence="10"/>
+        <menuitem id="menu_hostname_view" name="Hostname" parent="menu_hostname_root"
+                  action="action_hostname_view" sequence="10"/>
+
+    </data>
+</odoo>
