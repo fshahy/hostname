@@ -7,7 +7,7 @@
     'author': 'fshahy',
     'depends': ['web',],
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/host_views.xml',
     ],
     'installable': True,
