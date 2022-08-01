@@ -9,7 +9,8 @@
                 <form string="Hostname">
                     <sheet>
                         <group>
-                            <field name="name"/>
+                            <field name="name" readonly="1"/>
+                            <field name="pid" readonly="1"/>
                         </group>
                     </sheet>
                 </form>
@@ -22,6 +23,7 @@
             <field name="arch" type="xml">
                 <tree string="Hostnames">
                     <field name="name"/>
+                    <field name="pid"/>
                 </tree>
             </field>
         </record>
