@@ -7,4 +7,4 @@ class Host(models.Model):
     _name = "hostname"
 
     name = fields.Char(default=lambda self: platform.node(), string='Hostname')
-    pid = fields(default=lambda self: os.getpid(), string='Prcoess ID')
+    pid = fields.Char(default=lambda self: os.getpid(), string='Prcoess ID')
