@@ -1,3 +1,4 @@
+import os
 import platform
 from odoo import fields, models
 
@@ -5,4 +6,5 @@ from odoo import fields, models
 class Host(models.Model):
     _name = "hostname"
 
-    name = fields.Char(default=lambda self: platform.node())
+    name = fields.Char(default=lambda self: platform.node(), string='Hostname')
+    pid = fields(default=lambda self: os.getpid(), string='Prcoess ID')
